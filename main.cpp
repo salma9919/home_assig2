@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 int getSum(vector<int>& input)
 {
@@ -25,13 +26,22 @@ float getAverage(vector<int>& input)
     average=float(sum)/input.size();
 
     return average;
+
 }
+
+
+int getMin(vector<int>&input)
+{
+  int minvalue=*min_element(input.begin(), input.end()) ;
+    return minvalue;
+};
 
 int main()
 {
-    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    int arr[] = {-1,2,3,-4,5,6,7,8,9,10};
 vector<int> A(arr, arr+sizeof(arr)/sizeof(arr[0]));
     cout<<getSum(A)<<"\n";
-    cout<<getAverage(A);
+    cout<<getAverage(A)<<"\n";
+    cout<<getMin(A);
     return 0;
 }
